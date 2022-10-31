@@ -1,7 +1,7 @@
-import React from 'react';
+import React from "react";
 
 //Styles
-import './Home.scss';
+import "./Home.scss";
 
 //Font awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -12,177 +12,222 @@ import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
 
 //Components
-import Carousel from '../Components/Carousel';
-import PortfolioSlider from '../Components/PortfolioSlider';
+import Carousel from "../Components/Carousel";
+import PortfolioSlider from "../Components/PortfolioSlider";
 
 //Certificate paths
-import ISO9001 from '../Img/Certificates/iso9001.jpg';
-import ISO14001 from '../Img/Certificates/iso14001.jpg';
-import ISO18001 from '../Img/Certificates/iso18001.jpg';
+import ISO9001 from "../Img/Certificates/iso9001.jpg";
+import ISO14001 from "../Img/Certificates/iso14001.jpg";
+import ISO18001 from "../Img/Certificates/iso18001.jpg";
 
 //SVG icons
-import Dots from '../Icons/Dots';
-import Square from '../Icons/Square';
-import Circle from '../Icons/Circle';
-import { NavLink } from 'react-router-dom';
+import Dots from "../Icons/Dots";
+import Square from "../Icons/Square";
+import Circle from "../Icons/Circle";
+import { NavLink } from "react-router-dom";
 
-function Home(props){
-    return(
-        <div className="homeView">
-            <Carousel />
+function Home(props) {
+  return (
+    <div className="homeView">
+      <Carousel />
 
-            <div className="container">
-                <div className="rentalOffer">
-                    <p>Prenájom špičkovej techniky za super ceny</p>
-                    <NavLink to="/rental" onClick={()=>props.scrollToTop()}>Prenajať</NavLink>
-                </div>
-
-                <div className="aboutUs section">
-                    <h2>O nás <Dots /></h2>
-
-                    <div className="container-inner">
-                        <h4>Company name</h4>
-                        <div className="text">
-                            <p>Naša spoločnosť bola založená v roku 2004. Od svojho vzniku sme realizovali desiatky stavebných projektov rôzneho charakteru. Cieľom všetkých našich činností je vždy plné uspokojenie požiadaviek a potrieb zákazníka.</p>
-
-                            <div className="showMore">
-                                <NavLink to="/about" onClick={()=>props.scrollToTop()}>Zobraziť viac <span><FontAwesomeIcon icon={faLongArrowAltRight} /></span></NavLink>
-                            </div>
-                        </div>
-                    </div>
-
-                    <Square />
-                </div>
-
-                <div className="certificates section">
-                    <h2>Certifikáty <Dots /></h2>
-
-                    <div className="container-inner">
-                        <div className="card-container">
-                            <div className="card">
-                                <h4>ISO 9001</h4>
-                                <p>Certifikát kvality</p>
-                                <img src={ISO9001} alt="ISO9001 Certificate" />
-
-                                <div className="box">
-                                    <NavLink to="">Zistiť viac</NavLink>
-
-                                    <div className="showMore">
-                                        <NavLink to="">Zobraziť certifikát <span><FontAwesomeIcon icon={faLongArrowAltRight} /></span></NavLink>
-                                    </div>
-                                </div>
-    
-                            </div>
-
-                            <div className="card">
-                                <h4>ISO 14001</h4>
-                                <p>Certifikát enviromentu</p>
-                                <img src={ISO14001} alt="ISO14001 Certificate" />
-
-                                <div className="box">
-                                    <NavLink to="">Zistiť viac</NavLink>
-
-                                    <div className="showMore">
-                                        <NavLink to="">Zobraziť certifikát <span><FontAwesomeIcon icon={faLongArrowAltRight} /></span></NavLink>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="card">
-                                <h4>OHSAS 18001</h4>
-                                <p>Certifikát bezpečnosti</p>
-                                <img src={ISO18001} alt="ISO18001 Certificate" />
-
-                                <div className="box">
-                                    <NavLink to="">Zistiť viac</NavLink>
-
-                                    <div className="showMore">
-                                        <NavLink to="">Zobraziť certifikát <span><FontAwesomeIcon icon={faLongArrowAltRight} /></span></NavLink>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div className="portfolio section">
-                    <h2>Portfólio <Dots /></h2>
-
-                    <div className="container-inner">
-                        <h4>Naše najnovšie práce</h4>
-
-                        <Square />
-                        <PortfolioSlider />
-                    </div>
-                </div>
-            </div>
-
-            <div className="allWorks">
-                <Circle />
-
-                <div className="container">
-                    <h3>Chcete vidieť všetky naše práce? </h3> 
-                    <NavLink to="/portfolio" onClick={()=>props.scrollToTop()}>Zobraziť celé portfólio</NavLink>
-                </div>        
-            </div>
-
-            <div className="contact section">
-                <div className="container">
-                    <h2>Kontakt <Dots /></h2>
-
-                    <div className="container-inner">
-                        <div className="wrapper">
-                            <div className="info">
-                                <div className="column">
-                                    <div className="heading">
-                                        <FontAwesomeIcon icon={faMapMarkerAlt} />
-                                        <h4>Kde sme</h4>
-                                    </div>
-                                    <p>Kukučínova 533/28</p>
-                                    <p>927 01</p>
-                                    <p>Šaľa</p>
-                                </div>
-                                    
-                                <div className="column">
-                                    <div className="heading">
-                                        <FontAwesomeIcon icon={faPhoneAlt} /> 
-                                        <h4>Kontakt</h4>
-                                    </div>
-                                    <p>0900 000 000</p>
-                                    <p>email@company.com</p>
-                                </div>
-                                
-                                <div className="column">
-                                    <div className="heading">
-                                        <FontAwesomeIcon icon={faClock} />
-                                        <h4>Pracovná doba</h4>
-                                    </div>
-                                    <p>Pondelok - piatok</p>
-                                    <p>8:00 - 18:00</p>
-                                </div>
-                            </div>
-
-                            <div className="form">
-                                <form>
-                                    <input type="text" placeholder="Name" />
-                                    <input type="email" placeholder="Email" />
-
-                                    <textarea placeholder="Message"></textarea>
-
-                                    <div className="send">
-                                        <FontAwesomeIcon icon={faPaperPlane} />
-                                        <NavLink to="">Odoslať</NavLink>
-                                    </div> 
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <Square />
-            </div>
+      <div className="container">
+        <div className="rentalOffer">
+          <p>Liên hệ để được hỗ trợ - tư vấn tốt nhất</p>
+          <NavLink to="/rental" onClick={() => props.scrollToTop()}>
+            Xem ngay!
+          </NavLink>
         </div>
-    )
+
+        <div className="aboutUs section">
+          <h2>
+            Giới thiệu <Dots />
+          </h2>
+
+          <div className="container-inner">
+            <h4>Chúng tôi là ai?</h4>
+            <div className="text">
+              <p>
+                Công ty TNHH Xây Dựng Hưng Thịnh được thành lập vào năm 2019 bởi
+                các kiến trúc sư tốt có trên 15 năm chuyên môn và kinh nghiệm
+                thực tế thi công các công trình kiến trúc dân dụng và nội thất
+                như: Văn phòng, khách sạn, showroom, quán cafe, căn hộ, biệt
+                thự, nhà phố… Chúng tôi hiểu rằng việc xây dựng hay hoàn thiện
+                nội ngoại thất một công trình sẽ cần rất nhiều thời gian, công
+                sức và tài chính. Chủ đầu tư hay chủ nhà nếu tự làm mọi thứ thì
+                không dễ dàng và thường dẫn đến kết quả không như mong muốn. Vì
+                thế nên chủ nhà rất cần đến một đơn vị/ công ty có đủ chuyên môn
+                và đủ Uy Tín để quán xuyến mọi việc cho họ. Và Công ty TNHH TKXD
+                Gia Bảo là nơi có thể giúp các gia chủ tạo nên các công trình,
+                không gian sống đảm bảo các yếu tố Thẩm mỹ, Công năng sử dụng,
+                An toàn kỹ thuật và Tài chính thích hợp.
+              </p>
+
+              <div className="showMore">
+                <NavLink to="/about" onClick={() => props.scrollToTop()}>
+                  Xem chi tiết{" "}
+                  <span>
+                    <FontAwesomeIcon icon={faLongArrowAltRight} />
+                  </span>
+                </NavLink>
+              </div>
+            </div>
+          </div>
+
+          <Square />
+        </div>
+
+        <div className="certificates section">
+          <h2>
+            Chứng chỉ <Dots />
+          </h2>
+
+          <div className="container-inner">
+            <div className="card-container">
+              <div className="card">
+                <h4>ISO 9001</h4>
+                <p>Chứng chỉ chất lượng</p>
+                <img src={ISO9001} alt="ISO9001 Certificate" />
+
+                <div className="box">
+                  <NavLink to="">Tìm hiểu thêm</NavLink>
+
+                  <div className="showMore">
+                    <NavLink to="">
+                      Xem chứng chỉ{" "}
+                      <span>
+                        <FontAwesomeIcon icon={faLongArrowAltRight} />
+                      </span>
+                    </NavLink>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card">
+                <h4>ISO 14001</h4>
+                <p>Chứng chỉ môi trường</p>
+                <img src={ISO14001} alt="ISO14001 Certificate" />
+
+                <div className="box">
+                  <NavLink to="">Tìm hiểu thêm</NavLink>
+
+                  <div className="showMore">
+                    <NavLink to="">
+                      Xem chứng chỉ{" "}
+                      <span>
+                        <FontAwesomeIcon icon={faLongArrowAltRight} />
+                      </span>
+                    </NavLink>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card">
+                <h4>OHSAS 18001</h4>
+                <p>Chứng chỉ an toàn</p>
+                <img src={ISO18001} alt="ISO18001 Certificate" />
+
+                <div className="box">
+                  <NavLink to="">Tìm hiểu thêm</NavLink>
+
+                  <div className="showMore">
+                    <NavLink to="">
+                      Xem chứng chỉ{" "}
+                      <span>
+                        <FontAwesomeIcon icon={faLongArrowAltRight} />
+                      </span>
+                    </NavLink>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="portfolio section">
+          <h2>
+            Portfólio <Dots />
+          </h2>
+
+          <div className="container-inner">
+            <h4>Xem qua những sản phẩm của chúng tôi</h4>
+
+            <Square />
+            <PortfolioSlider />
+          </div>
+        </div>
+      </div>
+
+      <div className="allWorks">
+        <Circle />
+
+        <div className="container">
+          <h3>Bạn muốn tìm hiểu thêm về chúng tôi? </h3>
+          <NavLink to="/portfolio" onClick={() => props.scrollToTop()}>
+            Xem tất cả hạng mục đầu tư
+          </NavLink>
+        </div>
+      </div>
+
+      <div className="contact section">
+        <div className="container">
+          <h2>
+            Liên hệ <Dots />
+          </h2>
+
+          <div className="container-inner">
+            <div className="wrapper">
+              <div className="info">
+                <div className="column">
+                  <div className="heading">
+                    <FontAwesomeIcon icon={faMapMarkerAlt} />
+                    <h4>Địa chỉ</h4>
+                  </div>
+                  <p>Đường Phạm Hùng</p>
+                  <p>Quận 8</p>
+                  <p>Thành phố Hồ Chí Minh</p>
+                </div>
+
+                <div className="column">
+                  <div className="heading">
+                    <FontAwesomeIcon icon={faPhoneAlt} />
+                    <h4>Liên hệ</h4>
+                  </div>
+                  <p>0900 000 000</p>
+                  <p>support.xaydunghungthinh@gmail.com</p>
+                </div>
+
+                <div className="column">
+                  <div className="heading">
+                    <FontAwesomeIcon icon={faClock} />
+                    <h4>Thời gian làm việc</h4>
+                  </div>
+                  <p>Thứ hai - Thứ bảy</p>
+                  <p>8:00 - 18:00</p>
+                </div>
+              </div>
+
+              <div className="form">
+                <form>
+                  <input type="text" placeholder="Tên" />
+                  <input type="email" placeholder="Địa chỉ email" />
+
+                  <textarea placeholder="Nội dung"></textarea>
+
+                  <div className="send">
+                    <FontAwesomeIcon icon={faPaperPlane} />
+                    <NavLink to="">Gửi ngay</NavLink>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <Square />
+      </div>
+    </div>
+  );
 }
 
 export default Home;

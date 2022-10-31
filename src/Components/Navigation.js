@@ -54,7 +54,7 @@ function Navigation(props) {
 
           <div className="rental">
             <NavLink to="/rental" activeClassName="activeRental">
-              Liên hệ chúng tôi ngay!
+              Thuê chúng tôi ngay!
             </NavLink>
           </div>
 
